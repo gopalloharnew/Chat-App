@@ -37,7 +37,7 @@
 }
 
 .message-box[data-position="center"] .message {
-  background-color: hsl(222, 60%, 40%);
+  background-color: var(--accent);
 }
 
 .message-box[data-position="left"] {
@@ -46,17 +46,19 @@
 }
 
 .message {
-  width: max-content;
-  background-color: hsl(222, 25%, 20%);
+  /* width: max-content; */
+  background-color: var(--message-bg);
   padding: 0px 1rem;
   border-radius: 0.25rem;
+  max-width: calc(100% - min(10vw, 100px));
+  overflow: auto;
 }
 
 /* Input */
 .input-container {
   width: 100%;
   padding: 12px;
-  background-color: hsl(222, 25%, 16%);
+  background-color: var(--input-container-bg);
   display: flex;
   align-items: center;
 }
@@ -71,7 +73,7 @@
   max-height: calc(
     (var(--line-height) * var(--max-number-of-line)) + (var(--padding-y) * 2)
   );
-  background-color: hsl(222, 25%, 20%);
+  background-color: var(--chat-input-bg);
   border-radius: 4px;
   line-height: var(--line-height);
   padding: var(--padding-y) var(--padding-x);
@@ -83,7 +85,7 @@
   height: 40px;
   padding: 0px 8px;
   line-height: 40px;
-  background-color: hsl(222, 25%, 20%);
+  background-color: var(--chat-input-bg);
   border-radius: 4px;
   margin-left: 8px;
   cursor: pointer;
